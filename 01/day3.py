@@ -1,14 +1,13 @@
 
-from collections import namedtuple, defaultdict
+from collections import namedtuple
 
 from shared import read_input_lines, exec_cl_function
 
 
-def part1(size=1000, file_= '../input/day3.txt'):
+def part1(size=1000, file_='../input/day3.txt'):
     input_ = read_input_lines(file_, coerce=False)
     claims = [parse(line) for line in input_]
     fabric = [[0 for i in range(size)] for j in range(size)]
-    # overlaps = defaultdict(int)
     overlaps = set()
 
     for i, claim in enumerate(claims):
