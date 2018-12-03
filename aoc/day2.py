@@ -18,13 +18,13 @@ def contains_letter_repeated_n(n, string):
 
 
 def part1():
-    strings = read_input_lines('../input/day2.txt', coerce=False)
+    strings = read_input_lines('../input/day2.txt')
     repeats = letter_repeats(strings)
     print(sum(repeats[2]) * sum(repeats[3]))
 
 
 def part2():
-    strings = read_input_lines('../input/day2.txt', coerce=False)
+    strings = read_input_lines('../input/day2.txt')
     total = len(strings)
     for i, string in enumerate(strings):
         others = strings[:i] + strings[i+1:]

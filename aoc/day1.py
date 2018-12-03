@@ -8,7 +8,7 @@ INPUT = '../input/day1.txt'
 def first_duplicate():
     total = 0
     seen = set()
-    for freq in cycle(read_input_lines(INPUT)):
+    for freq in cycle(read_input_lines(INPUT, convert_to=int)):
         total += freq
         if total in seen:
             return total, len(seen)
@@ -16,7 +16,7 @@ def first_duplicate():
 
 
 def part1():
-    print(sum(read_input_lines(INPUT)))
+    print(sum(read_input_lines(INPUT, convert_to=int)))
 
 
 def part2():
